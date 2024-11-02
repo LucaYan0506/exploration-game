@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://dcw6l4vu174rl"]
+
+[ext_resource type="Texture2D" uid="uid://dc1rui354et0m" path="res://Blue-Abstract-Background-4K-Wallpaper.jpg" id="1_6bu1k"]
+[ext_resource type="Script" path="res://background.gd" id="1_7m7qs"]
+[ext_resource type="Theme" uid="uid://c42r8558dvmyi" path="res://clashy/clashy.tres" id="3_eyqyp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7xyv8"]
+bg_color = Color(0.390007, 0.675894, 0.458808, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_7m7qs")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1145.0
+offset_bottom = 635.0
+texture = ExtResource("1_6bu1k")
+expand_mode = 1
+
+[node name="pause" type="Button" parent="."]
+offset_left = 30.0
+offset_top = 21.0
+offset_right = 130.0
+offset_bottom = 91.0
+theme = ExtResource("3_eyqyp")
+theme_override_font_sizes/font_size = 30
+text = "|  |
+"
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="UI"]
+offset_left = 931.0
+offset_top = 21.0
+offset_right = 1112.0
+offset_bottom = 116.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = ExtResource("3_eyqyp")
+theme_override_styles/panel = SubResource("StyleBoxFlat_7xyv8")
+
+[node name="pointsLabel" type="Label" parent="UI/Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_eyqyp")
+theme_override_colors/font_shadow_color = Color(0.741176, 0.376471, 0.0862745, 1)
+theme_override_font_sizes/font_size = 40
+text = "Points: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="pause" to="." method="_on_menu_pressed"]
