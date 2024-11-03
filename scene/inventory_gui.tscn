@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://brvao2xm14yax"]
 
-[ext_resource type="Texture2D" uid="uid://3de0tni8qbhj" path="res://image/inve-removebg-preview.png" id="1_gnugt"]
+[ext_resource type="Texture2D" uid="uid://digdvurhhtspa" path="res://image/inve-removebg-preview.png" id="1_gnugt"]
 [ext_resource type="PackedScene" uid="uid://cfdlv8ou8pp1d" path="res://scene/slot.tscn" id="2_gec4s"]
 
 [node name="InventoryGui" type="Control"]
