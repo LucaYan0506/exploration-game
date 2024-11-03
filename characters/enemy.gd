@@ -6,6 +6,8 @@ extends Area2D
 func _ready():
 	if (character_body_2d.get_parent().name == "battleNode"): #don't move when we are in the battle animation
 		sprite_2d.animation = "default"
+	if (Global.playerWin):
+		queue_free()
 		
 		
 
