@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://cxotadsvt1puc"]
+
+[ext_resource type="Script" path="res://inventoryitem.gd" id="1_ownvb"]
+[ext_resource type="Texture2D" uid="uid://bhchaej0lhbw8" path="res://image/clean-bathroom-cleaner-game-pixel-art-vector-47157095-removebg-preview.png" id="2_neuqe"]
+
+[resource]
+script = ExtResource("1_ownvb")
+name = "Spray"
+texture = ExtResource("2_neuqe")

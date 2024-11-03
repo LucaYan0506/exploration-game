@@ -4,6 +4,7 @@ extends CharacterBody2D
 
 @export var maxHealth = 10
 @onready var currentHealth: int = maxHealth
+@export var inventory: Inventory
 
 var speed = 300
 
