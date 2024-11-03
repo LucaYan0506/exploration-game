@@ -3,6 +3,7 @@ extends CharacterBody2D
 @onready var character_body_2d: CharacterBody2D = $"."
 
 
+
 var speed = 300
 
 func _ready():
