@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bn5g5fmnxx40o"]
+
+[node name="run" type="Button"]
+anchors_preset = -1
+anchor_left = 0.697917
+anchor_top = 0.587963
+anchor_right = 1.00087
+anchor_bottom = 0.716049
+offset_left = -3.00037
+offset_top = 101.0
+offset_right = -3.00037
+offset_bottom = 101.0
+theme_override_font_sizes/font_size = 30
+text = "RUN"
+metadata/_edit_use_anchors_ = true

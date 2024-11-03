@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bl21a68mttwcm"]
+
+[node name="defence" type="Button"]
+anchors_preset = -1
+anchor_left = 0.318576
+anchor_top = 0.524691
+anchor_right = 0.62066
+anchor_bottom = 0.666666
+offset_left = 435.0
+offset_top = 222.0
+offset_right = 435.0
+offset_bottom = 222.0
+theme_override_font_sizes/font_size = 30
+text = "DEFENCE"
+metadata/_edit_use_anchors_ = true

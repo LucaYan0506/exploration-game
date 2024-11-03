@@ -1,10 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://jmxgjsysd762"]
+[gd_scene load_steps=7 format=3 uid="uid://jmxgjsysd762"]
 
 [ext_resource type="Script" path="res://characters/enemy.gd" id="1_iwsyj"]
 [ext_resource type="Texture2D" uid="uid://lao6s1f57neb" path="res://image/battery enemy.png" id="2_y3s58"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rap8b"]
-size = Vector2(43, 62.5)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d720q"]
 atlas = ExtResource("2_y3s58")
@@ -31,12 +28,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0a8sy"]
 size = Vector2(51, 70)
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="Area2D"]
 script = ExtResource("1_iwsyj")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-79.5, -53.75)
-shape = SubResource("RectangleShape2D_rap8b")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-80.2905, -54.1554)
@@ -44,11 +37,8 @@ scale = Vector2(0.63408, 0.595226)
 sprite_frames = SubResource("SpriteFrames_4tr0u")
 autoplay = "default"
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(-79, -41)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-1.5, -13)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-80.5, -54)
 shape = SubResource("RectangleShape2D_0a8sy")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,14 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://cjbctte7dxcil"]
+[gd_scene load_steps=8 format=3 uid="uid://cjbctte7dxcil"]
 
-[ext_resource type="Texture2D" uid="uid://wtmunq26njny" path="res://image/city-battle-backgroundpng.png" id="1_wuhdi"]
+[ext_resource type="Script" path="res://scene/battle.gd" id="1_r7j6w"]
+[ext_resource type="Texture2D" uid="uid://brlmoie82mtrd" path="res://image/city-battle-backgroundpng.png" id="1_wuhdi"]
 [ext_resource type="PackedScene" uid="uid://dbec1tjmaudvr" path="res://characters/main_char.tscn" id="2_oaxxi"]
 [ext_resource type="PackedScene" uid="uid://jmxgjsysd762" path="res://characters/enemy.tscn" id="3_f7631"]
+[ext_resource type="PackedScene" path="res://scene/defence.tscn" id="4_nb6nj"]
+[ext_resource type="PackedScene" uid="uid://b0ixqdbwh035g" path="res://scene/fight.tscn" id="5_vbge0"]
+[ext_resource type="PackedScene" path="res://scene/run.tscn" id="6_axqis"]
 
 [node name="battleNode" type="Node"]
+script = ExtResource("1_r7j6w")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1158.0
-offset_bottom = 463.0
+offset_bottom = 474.0
 texture = ExtResource("1_wuhdi")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_oaxxi")]
@@ -18,3 +23,29 @@ scale = Vector2(2, 2)
 [node name="CharacterBody2D2" parent="." instance=ExtResource("3_f7631")]
 position = Vector2(922, 404)
 scale = Vector2(2, 2)
+
+[node name="heal" parent="." instance=ExtResource("4_nb6nj")]
+anchor_left = 0.298611
+offset_left = 437.0
+offset_top = 135.0
+offset_right = 437.0
+offset_bottom = 135.0
+text = "HEAL"
+
+[node name="fight" parent="." instance=ExtResource("5_vbge0")]
+anchor_top = 0.554012
+offset_left = -81.0
+offset_top = 114.0
+offset_right = -81.0
+offset_bottom = 114.0
+
+[node name="run" parent="." instance=ExtResource("6_axqis")]
+anchor_left = 0.67882
+offset_left = -1.00085
+offset_top = 185.0
+offset_right = -1.00085
+offset_bottom = 185.0
+
+[connection signal="pressed" from="heal" to="." method="_on_heal_pressed"]
+[connection signal="pressed" from="fight" to="." method="_on_fight_pressed"]
+[connection signal="pressed" from="run" to="." method="_on_run_pressed"]
