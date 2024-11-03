@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dcw6l4vu174rl"]
+[gd_scene load_steps=6 format=3 uid="uid://dcw6l4vu174rl"]
 
 [ext_resource type="Texture2D" uid="uid://dc1rui354et0m" path="res://Blue-Abstract-Background-4K-Wallpaper.jpg" id="1_6bu1k"]
 [ext_resource type="Script" path="res://background.gd" id="1_7m7qs"]
 [ext_resource type="Theme" uid="uid://c42r8558dvmyi" path="res://clashy/clashy.tres" id="3_eyqyp"]
+[ext_resource type="Texture2D" uid="uid://dtjnxb64i4yv5" path="res://image/full_heart-removebg-preview.png" id="4_d0nyu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7xyv8"]
 bg_color = Color(0.390007, 0.675894, 0.458808, 1)
@@ -11,20 +12,12 @@ bg_color = Color(0.390007, 0.675894, 0.458808, 1)
 script = ExtResource("1_7m7qs")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 1145.0
-offset_bottom = 635.0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 1146.0
+offset_bottom = 634.0
 texture = ExtResource("1_6bu1k")
 expand_mode = 1
-
-[node name="pause" type="Button" parent="."]
-offset_left = 30.0
-offset_top = 21.0
-offset_right = 130.0
-offset_bottom = 91.0
-theme = ExtResource("3_eyqyp")
-theme_override_font_sizes/font_size = 30
-text = "|  |
-"
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -53,4 +46,122 @@ text = "Points: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="pause" to="." method="_on_pause_pressed"]
+[node name="pause" type="Button" parent="UI"]
+offset_right = 100.0
+offset_bottom = 70.0
+theme = ExtResource("3_eyqyp")
+theme_override_font_sizes/font_size = 30
+text = "|  |
+"
+
+[node name="HeartsContainer" type="HBoxContainer" parent="UI"]
+anchors_preset = -1
+anchor_right = 0.838
+anchor_bottom = 0.086
+offset_left = 35.0
+offset_top = 15.0
+offset_right = 73.6239
+offset_bottom = 8.272
+size_flags_horizontal = 0
+
+[node name="heartGui" type="Panel" parent="UI/HeartsContainer"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="UI/HeartsContainer/heartGui"]
+texture_repeat = 2
+position = Vector2(288.844, 35.375)
+scale = Vector2(1.99023, 1.07422)
+texture = ExtResource("4_d0nyu")
+hframes = 2
+
+[node name="heartGui2" type="Panel" parent="UI/HeartsContainer"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="UI/HeartsContainer/heartGui2"]
+texture_repeat = 2
+position = Vector2(345, 35)
+scale = Vector2(1.99023, 1.07422)
+texture = ExtResource("4_d0nyu")
+hframes = 2
+
+[node name="heartGui3" type="Panel" parent="UI/HeartsContainer"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="UI/HeartsContainer/heartGui3"]
+texture_repeat = 2
+position = Vector2(401, 35)
+scale = Vector2(1.99023, 1.07422)
+texture = ExtResource("4_d0nyu")
+hframes = 2
+
+[node name="heartGui4" type="Panel" parent="UI/HeartsContainer"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="UI/HeartsContainer/heartGui4"]
+texture_repeat = 2
+position = Vector2(457, 33)
+scale = Vector2(1.99023, 1.08398)
+texture = ExtResource("4_d0nyu")
+hframes = 2
+
+[node name="heartGui5" type="Panel" parent="UI/HeartsContainer"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="UI/HeartsContainer/heartGui5"]
+texture_repeat = 2
+position = Vector2(510, 32)
+scale = Vector2(1.99023, 1.07422)
+texture = ExtResource("4_d0nyu")
+hframes = 2
+
+[node name="heartGui6" type="Panel" parent="UI/HeartsContainer"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="UI/HeartsContainer/heartGui6"]
+texture_repeat = 2
+position = Vector2(559, 33)
+scale = Vector2(1.99023, 1.07422)
+texture = ExtResource("4_d0nyu")
+hframes = 2
+
+[node name="heartGui7" type="Panel" parent="UI/HeartsContainer"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="UI/HeartsContainer/heartGui7"]
+texture_repeat = 2
+position = Vector2(615, 33)
+scale = Vector2(1.99023, 1.07422)
+texture = ExtResource("4_d0nyu")
+hframes = 2
+
+[node name="heartGui8" type="Panel" parent="UI/HeartsContainer"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="UI/HeartsContainer/heartGui8"]
+texture_repeat = 2
+position = Vector2(670, 34)
+scale = Vector2(1.99023, 1.07422)
+texture = ExtResource("4_d0nyu")
+hframes = 2
+
+[node name="heartGui9" type="Panel" parent="UI/HeartsContainer"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="UI/HeartsContainer/heartGui9"]
+texture_repeat = 2
+position = Vector2(727, 36)
+scale = Vector2(1.99023, 1.07422)
+texture = ExtResource("4_d0nyu")
+hframes = 2
+
+[node name="heartGui10" type="Panel" parent="UI/HeartsContainer"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="UI/HeartsContainer/heartGui10"]
+texture_repeat = 2
+position = Vector2(780, 37)
+scale = Vector2(1.99023, 1.07422)
+texture = ExtResource("4_d0nyu")
+hframes = 2
+
+[connection signal="pressed" from="UI/pause" to="." method="_on_pause_pressed"]
