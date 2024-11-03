@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=3 uid="uid://d07o4hj4qygqo"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_cn6cv"]
+[ext_resource type="Texture2D" uid="uid://cqxpjud1nele0" path="res://mainBackground.jpg" id="2_s2ik2"]
+[ext_resource type="Theme" uid="uid://c42r8558dvmyi" path="res://clashy/clashy.tres" id="2_wujkl"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_cn6cv")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_s2ik2")
+expand_mode = 1
+
+[node name="MobTimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="ScoreTimer" type="Timer" parent="."]
+
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="city" type="Button" parent="."]
+offset_left = 203.0
+offset_top = 132.0
+offset_right = 512.0
+offset_bottom = 303.0
+theme = ExtResource("2_wujkl")
+theme_override_font_sizes/font_size = 70
+text = "City"
+
+[node name="beach" type="Button" parent="."]
+offset_left = 664.0
+offset_top = 132.0
+offset_right = 975.0
+offset_bottom = 303.0
+theme = ExtResource("2_wujkl")
+theme_override_font_sizes/font_size = 70
+text = "Beach"
+
+[node name="glassland" type="Button" parent="."]
+offset_left = 388.0
+offset_top = 381.0
+offset_right = 779.0
+offset_bottom = 564.0
+theme = ExtResource("2_wujkl")
+theme_override_font_sizes/font_size = 70
+text = "Glassland"
+
+[connection signal="pressed" from="city" to="." method="_on_city_pressed"]
+[connection signal="pressed" from="beach" to="." method="_on_beach_pressed"]
+[connection signal="pressed" from="glassland" to="." method="_on_glassland_pressed"]
