@@ -13,6 +13,7 @@ func new_game():
 	$StartTimer.start()
 
 func _on_city_pressed() -> void:
+
 	get_tree().change_scene_to_file("res://scene/background1.tscn")
 
 
