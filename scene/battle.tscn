@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://cjbctte7dxcil"]
 
-[ext_resource type="Texture2D" uid="uid://wtmunq26njny" path="res://image/city-battle-backgroundpng.png" id="1_wuhdi"]
+[ext_resource type="Texture2D" uid="uid://brlmoie82mtrd" path="res://image/city-battle-backgroundpng.png" id="1_wuhdi"]
 [ext_resource type="PackedScene" uid="uid://dbec1tjmaudvr" path="res://characters/main_char.tscn" id="2_oaxxi"]
-[ext_resource type="PackedScene" uid="uid://jmxgjsysd762" path="res://characters/enemy.tscn" id="3_f7631"]
+[ext_resource type="PackedScene" uid="uid://jmxgjsysd762" path="res://characters/enermy.tscn" id="3_f7631"]
 
 [node name="battleNode" type="Node"]
 
@@ -18,3 +18,37 @@ scale = Vector2(2, 2)
 [node name="CharacterBody2D2" parent="." instance=ExtResource("3_f7631")]
 position = Vector2(922, 404)
 scale = Vector2(2, 2)
+
+[node name="fight" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.0703125
+anchor_top = 0.587963
+anchor_right = 0.297743
+anchor_bottom = 0.665123
+theme_override_font_sizes/font_size = 30
+text = "FIGHT"
+metadata/_edit_use_anchors_ = true
+
+[node name="defence" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.374132
+anchor_top = 0.589506
+anchor_right = 0.62066
+anchor_bottom = 0.666667
+theme_override_font_sizes/font_size = 30
+text = "DEFENCE"
+metadata/_edit_use_anchors_ = true
+
+[node name="run" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.697917
+anchor_top = 0.587963
+anchor_right = 0.946181
+anchor_bottom = 0.665123
+theme_override_font_sizes/font_size = 30
+text = "RUN"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="fight" to="CharacterBody2D" method="_on_fight_pressed"]
+[connection signal="pressed" from="defence" to="CharacterBody2D" method="_on_defence_pressed"]
+[connection signal="pressed" from="run" to="CharacterBody2D" method="_on_run_pressed"]
