@@ -1,10 +1,10 @@
 extends Node
 
-@onready var heartscontainer = $UI/HeartsContainer
+@onready var heartscontainer: HBoxContainer = $HeartsContainer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	heartscontainer.setMaxHearts(Global.player_maxHealth)
 #
 ## Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta: float) -> void:
