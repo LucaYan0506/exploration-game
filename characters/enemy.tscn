@@ -42,6 +42,7 @@ shape = SubResource("RectangleShape2D_rap8b")
 position = Vector2(-80.2905, -54.1554)
 scale = Vector2(0.63408, 0.595226)
 sprite_frames = SubResource("SpriteFrames_4tr0u")
+autoplay = "default"
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-79, -41)
