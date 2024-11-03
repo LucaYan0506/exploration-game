@@ -38,8 +38,13 @@ func enemyAction() -> void:
 
 func _on_run_pressed() -> void:
 	Global.mHp -= 4
-	print("player hp:" + str(Global.mHp))
-	get_tree().change_scene_to_file("res://scene/background1" + ".tscn")
+	if (Global.mHp <= 0):
+		print("You lost")
+		Global.playerWin = false
+		get_tree().change_scene_to_file("res://main.tscn")
+	else:
+		print("player hp:" + str(Global.mHp))
+		get_tree().change_scene_to_file("res://scene/background1" + ".tscn")
 
 
 func _on_heal_pressed() -> void:
