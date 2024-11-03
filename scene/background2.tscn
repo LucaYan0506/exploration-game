@@ -1,17 +1,17 @@
-[gd_scene load_steps=10 format=4 uid="uid://dcw6l4vu174rl"]
+[gd_scene load_steps=10 format=4 uid="uid://b5jr0ai2jw4c1"]
 
-[ext_resource type="Texture2D" uid="uid://dc1rui354et0m" path="res://Blue-Abstract-Background-4K-Wallpaper.jpg" id="1_6bu1k"]
-[ext_resource type="Script" path="res://scene/background.gd" id="1_7m7qs"]
-[ext_resource type="Theme" uid="uid://c42r8558dvmyi" path="res://clashy/clashy.tres" id="3_eyqyp"]
-[ext_resource type="PackedScene" uid="uid://jmxgjsysd762" path="res://characters/enemy.tscn" id="4_xlnw1"]
-[ext_resource type="PackedScene" uid="uid://dbec1tjmaudvr" path="res://characters/main_char.tscn" id="5_vy2bd"]
-[ext_resource type="Texture2D" uid="uid://dbe06n4l2niyt" path="res://image/brown.png" id="6_g8mof"]
+[ext_resource type="Script" path="res://scene/background.gd" id="1_vqky5"]
+[ext_resource type="Texture2D" uid="uid://cks18te1qtbj4" path="res://image/beach.png" id="2_cbmda"]
+[ext_resource type="Theme" uid="uid://c42r8558dvmyi" path="res://clashy/clashy.tres" id="3_sekkk"]
+[ext_resource type="PackedScene" uid="uid://jmxgjsysd762" path="res://characters/enemy.tscn" id="4_gosgn"]
+[ext_resource type="PackedScene" uid="uid://dbec1tjmaudvr" path="res://characters/main_char.tscn" id="5_k8vqf"]
+[ext_resource type="Texture2D" uid="uid://dbe06n4l2niyt" path="res://image/brown.png" id="6_4wqy0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7xyv8"]
 bg_color = Color(0.390007, 0.675894, 0.458808, 1)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ogkjk"]
-texture = ExtResource("6_g8mof")
+texture = ExtResource("6_4wqy0")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -406,19 +406,23 @@ texture = ExtResource("6_g8mof")
 13:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_u0bj4"]
+tile_size = Vector2i(14, 15)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ogkjk")
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_7m7qs")
+script = ExtResource("1_vqky5")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 1145.0
-offset_bottom = 635.0
+offset_left = -67.0
+offset_top = -222.0
+offset_right = 1078.0
+offset_bottom = 413.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("1_6bu1k")
+texture = ExtResource("2_cbmda")
 expand_mode = 1
+stretch_mode = 3
 metadata/_edit_use_anchors_ = true
 
 [node name="UI" type="CanvasLayer" parent="."]
@@ -429,7 +433,7 @@ anchor_left = 0.0173611
 anchor_top = 0.0262346
 anchor_right = 0.104167
 anchor_bottom = 0.134259
-theme = ExtResource("3_eyqyp")
+theme = ExtResource("3_sekkk")
 theme_override_font_sizes/font_size = 30
 text = "|  |
 "
@@ -443,7 +447,7 @@ anchor_right = 0.965278
 anchor_bottom = 0.179012
 size_flags_horizontal = 0
 size_flags_vertical = 0
-theme = ExtResource("3_eyqyp")
+theme = ExtResource("3_sekkk")
 theme_override_styles/panel = SubResource("StyleBoxFlat_7xyv8")
 metadata/_edit_use_anchors_ = true
 
@@ -455,17 +459,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("3_eyqyp")
+theme = ExtResource("3_sekkk")
 theme_override_colors/font_shadow_color = Color(0.741176, 0.376471, 0.0862745, 1)
 theme_override_font_sizes/font_size = 40
 text = "Points: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Enemy" parent="." instance=ExtResource("4_xlnw1")]
+[node name="Enemy" parent="." instance=ExtResource("4_gosgn")]
 position = Vector2(822, 460)
 
-[node name="MainChar" parent="." instance=ExtResource("5_vy2bd")]
+[node name="MainChar" parent="." instance=ExtResource("5_k8vqf")]
 position = Vector2(420, 408)
 
 [node name="Camera2D" type="Camera2D" parent="MainChar"]
