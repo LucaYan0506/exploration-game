@@ -1,9 +1,10 @@
 extends Node
 
+@onready var heartscontainer: HBoxContainer = $HeartsContainer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	heartscontainer.setMaxHearts(Global.player_maxHealth)
 #
 ## Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta: float) -> void:
@@ -38,8 +39,13 @@ func enemyAction() -> void:
 
 func _on_run_pressed() -> void:
 	Global.mHp -= 4
-	print("player hp:" + str(Global.mHp))
-	get_tree().change_scene_to_file("res://scene/background1" + ".tscn")
+	if (Global.mHp <= 0):
+		print("You lost")
+		Global.playerWin = false
+		get_tree().change_scene_to_file("res://main.tscn")
+	else:
+		print("player hp:" + str(Global.mHp))
+		get_tree().change_scene_to_file("res://scene/background1" + ".tscn")
 
 
 func _on_heal_pressed() -> void:

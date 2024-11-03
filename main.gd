@@ -12,6 +12,16 @@ var score
 	#$Player.start($StartPosition.position)
 	#$StartTimer.start()
 
+func _ready() -> void:
+	Global.score = 0;
+	Global.mHp = 10;
+	Global.enemyHp = 10;
+	Global.playerTurn = true
+	Global.playerWin = false
+	Global.player_maxHealth = 10
+
+
+
 func _on_city_pressed() -> void:
 	get_tree().change_scene_to_file("res://scene/background1.tscn")
 

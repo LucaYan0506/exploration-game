@@ -7,3 +7,4 @@ var mHp = 10;
 var enemyHp = 10;
 var playerTurn = true
 var playerWin = false
+var player_maxHealth = 10
