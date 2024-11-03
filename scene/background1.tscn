@@ -6,10 +6,10 @@
 [ext_resource type="Theme" uid="uid://c42r8558dvmyi" path="res://clashy/clashy.tres" id="3_eyqyp"]
 [ext_resource type="PackedScene" uid="uid://d3snewxrkaqug" path="res://scene/hearts_container.tscn" id="4_dkanj"]
 [ext_resource type="PackedScene" uid="uid://jmxgjsysd762" path="res://characters/enemy.tscn" id="4_xlnw1"]
-[ext_resource type="PackedScene" path="res://scene/heart_gui.tscn" id="5_vraqv"]
+[ext_resource type="PackedScene" uid="uid://qbc1dm3yxbbl" path="res://scene/heart_gui.tscn" id="5_vraqv"]
 [ext_resource type="PackedScene" uid="uid://dbec1tjmaudvr" path="res://characters/main_char.tscn" id="5_vy2bd"]
 [ext_resource type="Texture2D" uid="uid://dbe06n4l2niyt" path="res://image/brown.png" id="6_g8mof"]
-[ext_resource type="PackedScene" path="res://scene/inventory_gui.tscn" id="7_accqq"]
+[ext_resource type="PackedScene" uid="uid://brvao2xm14yax" path="res://scene/inventory_gui.tscn" id="7_accqq"]
 [ext_resource type="Script" path="res://scene/inventory_gui.gd" id="8_35k54"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7xyv8"]
@@ -473,16 +473,28 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="HeartsContainer" parent="UI" instance=ExtResource("4_dkanj")]
-offset_left = 175.0
-offset_top = 15.0
-offset_right = 549.0
-offset_bottom = 85.0
+offset_left = 263.0
+offset_top = 10.0
+offset_right = 637.0
+offset_bottom = 80.0
 scale = Vector2(1.5, 1.5)
 
 [node name="heartGui" parent="UI/HeartsContainer" instance=ExtResource("5_vraqv")]
 layout_mode = 2
 
 [node name="InventoryGui" parent="UI" instance=ExtResource("7_accqq")]
+anchors_preset = -1
+anchor_left = 0.471
+anchor_top = 0.456
+anchor_right = 0.471
+anchor_bottom = 0.456
+offset_left = -188.592
+offset_top = -104.488
+offset_right = 63.408
+offset_bottom = 34.512
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
 script = ExtResource("8_35k54")
 
 [node name="Enemy" parent="." instance=ExtResource("4_xlnw1")]
